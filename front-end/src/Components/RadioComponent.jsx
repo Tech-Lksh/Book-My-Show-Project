@@ -1,12 +1,22 @@
-import React from 'react'
-import '../Css/RadioComponent.css'
+import React from "react";
+import "../Css/RadioComponent.css";
 
-const RadioComponent = ({text}) => {
+const RadioComponent = ({ text, changeSelection, data }) => {
+
+  const handleChecked = (val) => {
+    changeSelection(val)
+  }
   return (
-    <div className='form-check-label'>
-      <span className='text'>{text}</span>
+    <div
+      name={text}
+      className={`form-check-label ${data === text ? "active" : "inactive"}`}
+      onClick={() => {
+        handleChecked(text);
+      }}
+    >
+      <span className="text">{text}</span>
     </div>
-  )
-}
+  );
+};
 
-export default RadioComponent
+export default RadioComponent;

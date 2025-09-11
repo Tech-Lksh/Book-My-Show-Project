@@ -19,5 +19,16 @@ let slotsList = [
   "09:00 PM"
 ];
 
+let seats = [
+  'A1', 
+  'A2', 
+  'A3', 
+  'A4', 
+  'D1', 
+  'D2'
+];
+
 const _movieList = movieList;
 export { _movieList as movieList };
+export {slotsList as slotsList};
+export {seats as seats};
